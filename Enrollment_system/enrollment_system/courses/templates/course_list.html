@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Available Courses</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="welcome-message">Welcome to Online Course Enrollment System</h1>
+        <h1>Available Courses</h1>
+        <ul>
+            {% for course in courses %}
+                <li>{{ course.name }} - {{ course.description }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'enroll' %}" class="link-button">Enroll in Courses</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Enrollment Confirmation</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎉Enrollment Successful!</h1>
+        <p>You have successfully enrolled in the selected courses.</p>
+
+        <a href="{% url 'course_list' %}" class="link-button">Back to Course List</a>
+    </div>
+</body>
+
+</html>
